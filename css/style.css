@@ -49,6 +49,26 @@ table {
 @import url("https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css");
 @import url('https://fonts.googleapis.com/css?family=Noto+Serif:400,700');
 
+*, *::before. *::after{
+}
+.readerable-hidden{
+  background-color:pink;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  margin: -1px;
+  clip: rect(0,0,0,0);
+  visibility: hidden;
+}
+/* 
+.clearfix::after{
+  content: "";
+  clear: both;
+  display: block;
+}
+ */
+
 /* 본문 */
 a{
   color: inherit;
@@ -62,12 +82,106 @@ body{
   font-weight: 200;
   line-height: 1.15;
   color: #000;
-  background-color: #e9edef;
   font-size: 2rem;
+  background-color: #E9EDEF;
   /*background-image: linear-gradient(-45deg,red, green);
   background-color: #fff;
   background-image:
   linear-gradient(90deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px),
   linear-gradient(#eee .1em, transparent .1em);
   background-size: 100% 1.2em;*/
+}
+.container{
+  box-sizing: border-box;
+  width: 1200px;
+  margin: auto;
+}
+
+
+/*header - 헤더*/
+.header{
+  display:flex;
+  justify-content: space-between;
+  align-content: flex-end;
+  align-items: center;
+  margin: 80px 0;
+}
+
+/* 로고 */
+.logo{
+}
+/* 소개하기 */
+.introduce{
+  letter-spacing: -0.01em;
+}
+/* 메인메뉴 */
+
+.menu {
+  display:flex;
+}
+.menu li{
+  margin-left: 1.5em;
+  font-size: 2.5rem;
+  font-family: 'Spaqa Han Sans', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.menu .is-act { border-bottom: 4px solid black;
+}
+
+/* 포트폴리오 섹션 */
+
+.product{
+  background-color: white;
+  border: 1px solid #aaa;
+  margin: 40px;
+  padding: 50px;
+  display: flex;
+  align-items: center;
+}
+/* 세부항목 - 공통 */
+
+.product .summary{
+  margin: 1em 0;
+}
+/* 세부항목 - 세부 */
+
+.thumbnail{
+  margin-right: 50px;
+}
+.product .subject{
+  font-family: 'Spoqa Han Sans', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 3.5rem;
+}
+/* 
+.product .summary{
+  margin: 1em 0;
+}
+ */
+.product .more{
+  color: #ef5250;
+  font-size: 1.5rem;
+  
+}
+
+
+/* footer */
+.footer{
+  display: flex;
+  margin: 150px 20px 50px 20px;
+  font-size: 1.5rem;
+}
+
+.sns{
+  display: flex;
+}
+.sns li::before{
+  margin: 5px;
+  content: " · ";
+
+}
+.copyright{
+  margin-left: auto;
 }
