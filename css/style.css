@@ -51,6 +51,10 @@ table {
 
 *, *::before. *::after{
 }
+::selection {
+  color: #f3f5f6;
+  background: ef5350;;
+}
 .readerable-hidden{
   background-color:pink;
   position: absolute;
@@ -91,10 +95,17 @@ body{
   linear-gradient(#eee .1em, transparent .1em);
   background-size: 100% 1.2em;*/
 }
+/* responsive */
+img{
+  max-width: 100%;
+  height: auto;
+}
+
 .container{
   box-sizing: border-box;
   width: 1200px;
   margin: auto;
+  background-color: aqua
 }
 
 
@@ -184,4 +195,86 @@ body{
 }
 .copyright{
   margin-left: auto;
+}
+/* portfolio 공통 */
+.portfolio{
+  text-align: center;
+  line-height: 1.6;
+}
+.portfolio .thumbnail{
+  width: 100%;
+  font-size: 1.5rem;
+}
+.portfolio .list, .portfolio ol{
+  font-size: 3rem;
+}
+.portfolio ol{
+  list-style-type: decimal;
+}
+.portfolio li{
+  margin: 1em;
+}
+
+.dark{
+  background-color: #1a1e23;
+  color: #f3f5f6;
+  padding: 1em 2em;
+}
+.dark .comment{
+  color:#aaa;
+  font-size: 1.5rem;
+  font-style: italic;
+  padding:2em;
+}
+.light{
+  background-color: #fff;
+  padding: 1em 2em;
+}
+.portfolio .title{
+  font-size: 5rem;
+  font-family: "Spoqa Han Sans";
+  font-weight: 700;
+  padding:1em 0;
+  text-transform: uppercase;
+}
+.portfolio .medium{
+  font-size: 4rem;
+}
+.portfolio .small{
+  font-size: 1.5rem;
+  font-family: "Spoqa Han Sans";
+  font-weight: 500px;
+}
+.portfolio .group{
+  padding: 0;
+}
+.protfolio .wrapper {
+  text-align: left;
+  width: 750px;
+  margin:auto;
+  background-color: #ef5250;
+}
+
+.protfolio p{
+  font-size: 2rem;
+  padding: 1.5em 0;
+}
+
+.next-portfolio{
+  padding: 5em 4rem;
+  display: flex;
+  justify-content: space-between;
+}
+.next-title{
+  color: #aaa;
+  text-transform: uppercase;
+  font-family: "Spoqa Han Sans";
+  font-weight: 700;
+}
+
+.next-portfolio a{
+  color: #ef5250;
+}
+.next-portfolio a::affter{
+  content: "→";
 }
